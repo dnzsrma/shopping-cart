@@ -30,7 +30,6 @@ export default class Card extends React.Component{
                 quantity: parseInt(this.state.quantity)
             });
         }
-        console.log(cart);
     }
 
     setQuantity = (e) => {

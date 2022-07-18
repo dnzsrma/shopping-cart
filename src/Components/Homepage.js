@@ -33,7 +33,7 @@ const Homepage = () => {
 
       function fetchImages(){
         let array = []
-        fetch("https://api.escuelajs.co/api/v1/products?offset=0&limit=3",{ 
+        fetch("https://api.escuelajs.co/api/v1/products?offset=10&limit=3",{ 
             method:'GET', 
             mode: 'cors',
             headers: {

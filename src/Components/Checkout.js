@@ -8,7 +8,7 @@ const Checkout = (showCart) => {
     useEffect(() => {
         const cart = showCart.showCart();
         for(let i = 0 ; i < cart.length ; i++){
-            setTotal(prevTotal => prevTotal + (parseInt(cart[i].product.price * cart[i].quantity)/2));
+            setTotal(prevTotal => prevTotal + (parseInt(cart[i].product.price * cart[i].quantity)));
         }
       },[]);
 
@@ -29,7 +29,7 @@ const Checkout = (showCart) => {
                         <h1>MY CART</h1>
                         {CartArray.map( (x,i) =>
                             <div className="cartItem" key={x.product.id}>
-                            <img style={{height:'auto',width:'40px',border:'1px solid black'}} alt="No Image." src={x.product.images[0]}></img>
+                            <img alt="No Image." src={x.product.images[0]}></img>
                             <div>Quantity: {x.quantity}</div>
                             <div>{x.product.title}</div>
                             <div>Price: {x.product.price}</div>
